@@ -1,0 +1,8 @@
+# Force GitHub to detect all CSS files
+*.css linguist-detectable
+
+# Ensure HTML files are also counted
+*.html linguist-detectable
+
+#  Ensure JavaScript files are also counted
+*.js linguist-detectable
