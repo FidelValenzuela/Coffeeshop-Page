@@ -1,8 +1,84 @@
-/* 
-  This project uses Tailwind CSS for styling. 
-  Tailwind CSS is a utility-first CSS framework that allows for rapid UI development.
-  
-  To modify styles, refer to the HTML file where Tailwind classes are applied directly to elements.
-  
-  Documentation: https://tailwindcss.com/docs
-*/
+/* General Styles */
+body {
+  background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGNvZmV8ZW58MHx8fHx8MTY3Nzc2NDA1Nw&ixlib=rb-1.2.1&q=80&w=1600');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Inter', sans-serif;
+  color: #5D4037; /* Brown text color */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #D7C0AE;
+  text-align: center;
+  padding: 1rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #5D4037;
+  margin: 0;
+}
+
+.menu-card {
+  max-width: 800px;
+  margin: 3rem auto;
+  background: #FDFBF6;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+}
+
+.established {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #6B4F41;
+  margin-bottom: 2rem;
+}
+
+.menu-section {
+  margin-bottom: 2rem;
+}
+
+.menu-header {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  color: #6B4F41;
+  margin-bottom: 1rem;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.menu-item {
+  background-color: #E0D3C2;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item p {
+  margin: 0;
+}
+
+.price {
+  font-weight: bold;
+}
