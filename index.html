@@ -1,60 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cafe Menu</title>
-    <link rel="stylesheet" href="styles.css"/>
-  </head>
-  <body>
-    <div class="menu">
-      <main>
-        <h1>CAMPER CAFE</h1>
-        <p class="established">Est. 2020</p>
-        <hr>
-        <section>
-          <h2>Coffee</h2>
-          <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="coffee icon"/>
-          <article class="item">
-            <p class="flavor">French Vanilla</p><p class="price">3.00</p>
-          </article>
-          <article class="item">
-            <p class="flavor">Caramel Macchiato</p><p class="price">3.75</p>
-          </article>
-          <article class="item">
-            <p class="flavor">Pumpkin Spice</p><p class="price">3.50</p>
-          </article>
-          <article class="item">
-            <p class="flavor">Hazelnut</p><p class="price">4.00</p>
-          </article>
-          <article class="item">
-            <p class="flavor">Mocha</p><p class="price">4.50</p>
-          </article>
-        </section>
-        <section>
-          <h2>Desserts</h2>
-          <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="pie icon"/>
-          <article class="item">
-            <p class="dessert">Donut</p><p class="price">1.50</p>
-          </article>
-          <article class="item">
-            <p class="dessert">Cherry Pie</p><p class="price">2.75</p>
-          </article>
-          <article class="item">
-            <p class="dessert">Cheesecake</p><p class="price">3.00</p>
-          </article>
-          <article class="item">
-            <p class="dessert">Cinnamon Roll</p><p class="price">2.50</p>
-          </article>
-        </section>
-      </main>
-      <hr class="bottom-line">
-      <footer>
-        <p>
-          <a href="https://www.freecodecamp.org" target="_blank">Visit our website</a>
-        </p>
-        <p class="address">123 Free Code Camp Drive</p>
-      </footer>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe Menu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGNvZmV8ZW58MHx8fHx8MTY3Nzc2NDA1Nw&ixlib=rb-1.2.1&q=80&w=1600');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+  </style>
+</head>
+<body class="font-sans text-gray-800">
+  <!-- Header -->
+  <header class="bg-[#8B5E3C] text-white py-4 fixed top-0 w-full shadow-lg z-50">
+    <h1 class="text-4xl font-extrabold text-center">CAMPER CAFE</h1>
+  </header>
+
+  <!-- Content Section -->
+  <div class="max-w-4xl mx-auto mt-32 bg-white bg-opacity-90 shadow-xl rounded-lg overflow-hidden backdrop-blur-md" style="margin-bottom: 50px;">
+    <div class="px-6 py-6">
+      <p class="text-center text-gray-500 italic text-lg mb-4">Est. 2020</p>
+      
+      <!-- Coffee Menu -->
+      <section class="mb-6">
+        <h2 class="text-3xl font-bold text-teal-600 mb-4 text-center">Coffee</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="flex justify-between items-center bg-teal-50 p-4 rounded-lg shadow">
+            <p class="text-teal-700 font-medium">French Vanilla</p>
+            <p class="text-teal-900 font-bold">$3.00</p>
+          </div>
+          <div class="flex justify-between items-center bg-teal-50 p-4 rounded-lg shadow">
+            <p class="text-teal-700 font-medium">Caramel Macchiato</p>
+            <p class="text-teal-900 font-bold">$3.75</p>
+          </div>
+          <div class="flex justify-between items-center bg-teal-50 p-4 rounded-lg shadow">
+            <p class="text-teal-700 font-medium">Pumpkin Spice</p>
+            <p class="text-teal-900 font-bold">$3.50</p>
+          </div>
+          <div class="flex justify-between items-center bg-teal-50 p-4 rounded-lg shadow">
+            <p class="text-teal-700 font-medium">Hazelnut</p>
+            <p class="text-teal-900 font-bold">$4.00</p>
+          </div>
+          <div class="flex justify-between items-center bg-teal-50 p-4 rounded-lg shadow">
+            <p class="text-teal-700 font-medium">Mocha</p>
+            <p class="text-teal-900 font-bold">$4.50</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Desserts Menu -->
+      <section class="mb-6">
+        <h2 class="text-3xl font-bold text-orange-600 mb-4 text-center">Desserts</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="flex justify-between items-center bg-orange-50 p-4 rounded-lg shadow">
+            <p class="text-orange-700 font-medium">Donut</p>
+            <p class="text-orange-900 font-bold">$1.50</p>
+          </div>
+          <div class="flex justify-between items-center bg-orange-50 p-4 rounded-lg shadow">
+            <p class="text-orange-700 font-medium">Cherry Pie</p>
+            <p class="text-orange-900 font-bold">$2.75</p>
+          </div>
+          <div class="flex justify-between items-center bg-orange-50 p-4 rounded-lg shadow">
+            <p class="text-orange-700 font-medium">Cheesecake</p>
+            <p class="text-orange-900 font-bold">$3.00</p>
+          </div>
+          <div class="flex justify-between items-center bg-orange-50 p-4 rounded-lg shadow">
+            <p class="text-orange-700 font-medium">Cinnamon Roll</p>
+            <p class="text-orange-900 font-bold">$2.50</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sandwiches Menu -->
+      <section class="mb-6">
+        <h2 class="text-3xl font-bold text-green-600 mb-4 text-center">Sandwiches</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="flex justify-between items-center bg-green-50 p-4 rounded-lg shadow">
+            <p class="text-green-700 font-medium">Turkey Club</p>
+            <p class="text-green-900 font-bold">$6.50</p>
+          </div>
+          <div class="flex justify-between items-center bg-green-50 p-4 rounded-lg shadow">
+            <p class="text-green-700 font-medium">Ham & Cheese</p>
+            <p class="text-green-900 font-bold">$5.50</p>
+          </div>
+          <div class="flex justify-between items-center bg-green-50 p-4 rounded-lg shadow">
+            <p class="text-green-700 font-medium">Veggie Delight</p>
+            <p class="text-green-900 font-bold">$5.00</p>
+          </div>
+          <div class="flex justify-between items-center bg-green-50 p-4 rounded-lg shadow">
+            <p class="text-green-700 font-medium">Chicken Salad</p>
+            <p class="text-green-900 font-bold">$6.00</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Drinks Menu -->
+      <section>
+        <h2 class="text-3xl font-bold text-blue-600 mb-4 text-center">Drinks</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="flex justify-between items-center bg-blue-50 p-4 rounded-lg shadow">
+            <p class="text-blue-700 font-medium">Iced Tea</p>
+            <p class="text-blue-900 font-bold">$2.50</p>
+          </div>
+          <div class="flex justify-between items-center bg-blue-50 p-4 rounded-lg shadow">
+            <p class="text-blue-700 font-medium">Lemonade</p>
+            <p class="text-blue-900 font-bold">$2.75</p>
+          </div>
+          <div class="flex justify-between items-center bg-blue-50 p-4 rounded-lg shadow">
+            <p class="text-blue-700 font-medium">Soda</p>
+            <p class="text-blue-900 font-bold">$2.00</p>
+          </div>
+          <div class="flex justify-between items-center bg-blue-50 p-4 rounded-lg shadow">
+            <p class="text-blue-700 font-medium">Sparkling Water</p>
+            <p class="text-blue-900 font-bold">$3.00</p>
+          </div>
+        </div>
+      </section>
     </div>
-  </body>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-200 text-gray-600 text-center py-4">
+      <p>
+        <a href="https://techwithfidel.com" target="_blank" class="text-blue-600 hover:text-blue-800">Visit my website</a>
+      </p>
+      <p>123 Cafe Boulevard, Coffeeville, CA 90210</p>
+    </footer>
+  </div>
+</body>
 </html>
