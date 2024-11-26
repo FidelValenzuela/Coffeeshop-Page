@@ -22,14 +22,12 @@ header {
   display: flex;
   align-items: center; /* Align items vertically */
   justify-content: space-between; /* Align left and right sections */
-  flex-wrap: wrap; /* Allow wrapping for small screens */
 }
 
 .header-left {
   display: flex;
   align-items: baseline; /* Align "Est. 2020" to the baseline of "Camper Cafe" */
   gap: 0.5rem;
-  flex-wrap: wrap; /* Wrap "Est. 2020" under "Camper Cafe" */
 }
 
 .cafe-title {
@@ -53,40 +51,16 @@ header {
   text-align: right;
 }
 
-/* Responsive Styles for Small Screens */
+/* Responsive Styles for Smaller Screens */
 @media (max-width: 768px) {
-  .header-left {
-    flex-direction: column; /* Stack "Camper Cafe" and "Est. 2020" */
-    align-items: flex-start; /* Align text to the left */
-  }
-
-  .cafe-title {
-    font-size: 2rem;
-  }
-
   .menu-title {
-    align-self: flex-end; /* Align "Menu" to the right */
-    text-align: right;
+    display: none; /* Hide "Menu" on smaller screens */
   }
 }
 
 @media (max-width: 480px) {
-  .header-content {
-    flex-direction: column; /* Stack all header elements vertically */
-    align-items: flex-start; /* Align content to the left */
-  }
-
-  .cafe-title {
-    font-size: 1.8rem;
-  }
-
   .established {
-    font-size: 0.9rem;
-  }
-
-  .menu-title {
-    text-align: right; /* Ensure alignment on small screens */
-    width: 100%;
+    display: none; /* Hide "Est. 2020" on even smaller screens */
   }
 }
 
