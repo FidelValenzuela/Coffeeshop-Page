@@ -5,52 +5,60 @@ body {
   background-position: center;
   background-attachment: fixed;
   font-family: 'Inter', sans-serif;
-  color: #5D4037; /* Brown text color */
+  color: #5D4037;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 header {
-  background-color: #D7C0AE;
-  text-align: center;
-  padding: 1rem 0;
+  background-color: #FFFFFF;
+  padding: 1rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
+.header-content {
+  display: flex;
+  align-items: baseline; /* Aligns "Est. 2020" to the bottom of "Camper Cafe" */
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+header h1.cafe-title {
   font-size: 2.5rem;
   color: #5D4037;
   margin: 0;
 }
 
+header .established {
+  font-size: 1rem;
+  color: #6B4F41;
+  margin: 0;
+}
+
+/* Content Styles */
 .menu-card {
   max-width: 800px;
   margin: 3rem auto;
-  background: #FDFBF6;
+  background: transparent;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.menu-card-section {
+  background: #FFFFFF;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  backdrop-filter: blur(8px);
-}
-
-.established {
-  text-align: center;
-  font-style: italic;
-  font-size: 1.1rem;
-  color: #6B4F41;
   margin-bottom: 2rem;
-}
-
-.menu-section {
-  margin-bottom: 2rem;
+  padding: 1.5rem;
 }
 
 .menu-header {
   font-size: 1.8rem;
   font-weight: bold;
-  text-align: center;
-  color: #6B4F41;
+  text-align: center; /* Align title to center */
+  text-transform: uppercase; /* Capitalize title */
+  color: #5D4037;
   margin-bottom: 1rem;
 }
 
@@ -66,19 +74,37 @@ header h1 {
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  text-align: left;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.menu-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.menu-item p {
-  margin: 0;
+.item-name {
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .price {
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  header h1.cafe-title {
+    font-size: 2rem;
+  }
+
+  .menu-items {
+    grid-template-columns: 1fr; /* Stacks items vertically for smaller screens */
+  }
+
+  .menu-item {
+    flex-direction: column; /* Makes price wrap under the item name */
+    text-align: center;
+  }
+
+  .price {
+    margin-top: 0.5rem;
+  }
 }
