@@ -11,23 +11,30 @@ body {
   box-sizing: border-box;
 }
 
+/* Header Styles */
 header {
   background-color: #FFFFFF;
-  padding: 1rem;
+  padding: 1rem 2rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
   display: flex;
-  align-items: baseline; /* Aligns "Est. 2020" to the bottom of "Camper Cafe" */
-  justify-content: flex-start;
+  align-items: center; /* Vertically align content */
+  justify-content: space-between; /* Spread Camper Cafe and Menu */
+}
+
+.header-left {
+  display: flex;
+  align-items: baseline; /* Align "Est. 2020" to the bottom of "Camper Cafe" */
   gap: 1rem;
 }
 
-header h1.cafe-title {
+header .cafe-title, header .menu-title {
   font-size: 2.5rem;
   color: #5D4037;
   margin: 0;
+  text-transform: uppercase;
 }
 
 header .established {
@@ -59,7 +66,7 @@ header .established {
   text-align: center; /* Align title to center */
   text-transform: uppercase; /* Capitalize title */
   color: #5D4037;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem; /* Adjusted spacing */
 }
 
 .menu-items {
@@ -77,6 +84,12 @@ header .established {
   align-items: center;
   text-align: left;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, background-color 0.2s ease; /* Hover animation */
+}
+
+.menu-item:hover {
+  transform: translateY(-5px); /* Move slightly upward */
+  background-color: #d9c5ae; /* Slightly darker shade */
 }
 
 .item-name {
@@ -91,16 +104,12 @@ header .established {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  header h1.cafe-title {
-    font-size: 2rem;
-  }
-
   .menu-items {
-    grid-template-columns: 1fr; /* Stacks items vertically for smaller screens */
+    grid-template-columns: 1fr;
   }
 
   .menu-item {
-    flex-direction: column; /* Makes price wrap under the item name */
+    flex-direction: column;
     text-align: center;
   }
 
