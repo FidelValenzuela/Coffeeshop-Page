@@ -20,51 +20,49 @@ header {
 
 .header-content {
   display: flex;
-  align-items: center; /* Vertically align items */
+  align-items: center; /* Align items vertically */
   justify-content: space-between; /* Align left and right sections */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  flex-wrap: wrap; /* Allow wrapping for small screens */
 }
 
 .header-left {
   display: flex;
-  align-items: baseline; /* Align "Est. 2020" to the bottom of "Camper Cafe" */
-  gap: 1rem;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap; /* Wrap Est. 2020 below Camper Cafe */
 }
 
-header .cafe-title {
+.cafe-title {
   font-size: 2.5rem;
-  color: #5D4037;
   margin: 0;
+  color: #5D4037;
   text-transform: uppercase;
 }
 
-header .established {
+.established {
   font-size: 1rem;
   color: #6B4F41;
   margin: 0;
 }
 
-header .menu-title {
+.menu-title {
   font-size: 2rem;
   color: #5D4037;
   margin: 0;
   text-transform: uppercase;
-  text-align: right; /* Align Menu to the right */
+  text-align: right;
 }
 
-/* Responsive Adjustments */
+/* Responsive Styles for Small Screens */
 @media (max-width: 768px) {
-  .header-content {
-    flex-direction: column; /* Stack content vertically */
-    align-items: flex-start; /* Align to the left */
+  .header-left {
+    flex-direction: column; /* Stack Camper Cafe and Est. 2020 */
+    align-items: flex-start; /* Align text to the left */
   }
 
-  header .menu-title {
+  .menu-title {
     align-self: flex-end; /* Align Menu to the right */
-  }
-
-  header .header-left {
-    width: 100%;
+    text-align: right;
   }
 }
 
