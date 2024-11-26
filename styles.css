@@ -27,9 +27,9 @@ header {
 
 .header-left {
   display: flex;
-  align-items: baseline;
+  align-items: baseline; /* Align "Est. 2020" to the baseline of "Camper Cafe" */
   gap: 0.5rem;
-  flex-wrap: wrap; /* Wrap Est. 2020 below Camper Cafe */
+  flex-wrap: wrap; /* Wrap "Est. 2020" under "Camper Cafe" */
 }
 
 .cafe-title {
@@ -56,13 +56,37 @@ header {
 /* Responsive Styles for Small Screens */
 @media (max-width: 768px) {
   .header-left {
-    flex-direction: column; /* Stack Camper Cafe and Est. 2020 */
+    flex-direction: column; /* Stack "Camper Cafe" and "Est. 2020" */
     align-items: flex-start; /* Align text to the left */
   }
 
+  .cafe-title {
+    font-size: 2rem;
+  }
+
   .menu-title {
-    align-self: flex-end; /* Align Menu to the right */
+    align-self: flex-end; /* Align "Menu" to the right */
     text-align: right;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    flex-direction: column; /* Stack all header elements vertically */
+    align-items: flex-start; /* Align content to the left */
+  }
+
+  .cafe-title {
+    font-size: 1.8rem;
+  }
+
+  .established {
+    font-size: 0.9rem;
+  }
+
+  .menu-title {
+    text-align: right; /* Ensure alignment on small screens */
+    width: 100%;
   }
 }
 
@@ -86,10 +110,10 @@ header {
 .menu-header {
   font-size: 1.8rem;
   font-weight: bold;
-  text-align: center; /* Align title to center */
-  text-transform: uppercase; /* Capitalize title */
+  text-align: center; /* Align section headers to the center */
+  text-transform: uppercase; /* Capitalize titles */
   color: #5D4037;
-  margin-bottom: 1.5rem; /* Adjusted spacing */
+  margin-bottom: 1.5rem;
 }
 
 .menu-items {
@@ -111,7 +135,7 @@ header {
 }
 
 .menu-item:hover {
-  transform: translateY(-5px); /* Move slightly upward */
+  transform: translateY(-5px); /* Slight upward movement */
   background-color: #d9c5ae; /* Slightly darker shade */
 }
 
@@ -125,10 +149,10 @@ header {
   font-weight: normal;
 }
 
-/* Responsive Content Adjustments */
+/* Responsive Adjustments for Content */
 @media (max-width: 768px) {
   .menu-items {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Stack menu items in one column */
   }
 
   .menu-item {
