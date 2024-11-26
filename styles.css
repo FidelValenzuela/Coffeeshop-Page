@@ -20,8 +20,9 @@ header {
 
 .header-content {
   display: flex;
-  align-items: center; /* Vertically align content */
-  justify-content: space-between; /* Spread Camper Cafe and Menu */
+  align-items: center; /* Vertically align items */
+  justify-content: space-between; /* Align left and right sections */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .header-left {
@@ -30,7 +31,7 @@ header {
   gap: 1rem;
 }
 
-header .cafe-title, header .menu-title {
+header .cafe-title {
   font-size: 2.5rem;
   color: #5D4037;
   margin: 0;
@@ -41,6 +42,30 @@ header .established {
   font-size: 1rem;
   color: #6B4F41;
   margin: 0;
+}
+
+header .menu-title {
+  font-size: 2rem;
+  color: #5D4037;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: right; /* Align Menu to the right */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align to the left */
+  }
+
+  header .menu-title {
+    align-self: flex-end; /* Align Menu to the right */
+  }
+
+  header .header-left {
+    width: 100%;
+  }
 }
 
 /* Content Styles */
@@ -102,7 +127,7 @@ header .established {
   font-weight: normal;
 }
 
-/* Responsive Adjustments */
+/* Responsive Content Adjustments */
 @media (max-width: 768px) {
   .menu-items {
     grid-template-columns: 1fr;
